@@ -25,8 +25,176 @@
     <img src="apresentaçao invex.png" alt="Logo Invex Assessoria" class="mx-auto w-72 max-w-full" data-aos="fade-down">
   </header>
 
-  <!-- Conteúdo omitido para brevidade -->
+  <section class="px-6 py-12" data-aos="fade-up">
+  <div class="max-w-3xl mx-auto bg-white bg-opacity-80 backdrop-blur-lg p-8 rounded-2xl shadow-2xl text-center">
 
+    <!-- Abas com destaque -->
+    <div class="flex justify-center gap-4 mb-8 border-b-2 border-neutral-300 pb-2">
+      <button onclick="showTab('sobre')" id="btn-sobre"
+        class="tab-btn border-b-4 border-transparent px-4 py-2 font-semibold transition-all duration-300 hover:text-neutral-800 hover:border-neutral-500 text-neutral-800 bg-neutral-100 rounded-t-lg">
+        🚀 Sobre Nós
+      </button>
+      <button onclick="showTab('cultura')" id="btn-cultura"
+        class="tab-btn border-b-4 border-transparent px-4 py-2 font-semibold transition-all duration-300 hover:text-neutral-800 hover:border-neutral-500 text-neutral-800 bg-neutral-100 rounded-t-lg">
+        💡 Nossa Cultura
+      </button>
+    </div>
+
+    <!-- Conteúdo das abas -->
+    <div id="conteudo-sobre" class="tab-content">
+      <h2 class="text-3xl font-bold mb-4">🚀 Sobre Nós</h2>
+      <p class="text-lg leading-relaxed text-neutral-800">
+        A INVEX ASSESSORIA nasceu com o propósito de potencializar marcas e negócios por meio de estratégias inteligentes e resultados concretos.<br><br>
+        Com mais de 4 anos de experiência no mercado, unimos criatividade, inovação e tecnologia para transformar desafios em oportunidades.<br><br>
+        Somos movidos por dados, mas apaixonados por pessoas. Nosso foco é gerar impacto real, com soluções personalizadas para cada cliente.
+      </p>
+    </div>
+
+    <div id="conteudo-cultura" class="tab-content hidden">
+      <h2 class="text-3xl font-bold mb-4">💡 Nossa Cultura</h2>
+      <p class="text-lg leading-relaxed text-neutral-800">
+        Acreditamos na fusão entre tecnologia e humanização.<br><br>
+        Trabalhamos com foco em excelência, inovação contínua e resultados duradouros.<br><br>
+        Nossa cultura é baseada em:<br>
+        ✅ Transparência<br>
+        ✅ Colaboração<br>
+        ✅ Agilidade<br>
+        ✅ Resultados<br><br>
+        Utilizamos inteligência artificial para otimizar processos, mas sem abrir mão do olhar estratégico e humano em cada projeto.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- JS das abas -->
+<script>
+  function showTab(tab) {
+    const sobre = document.getElementById("conteudo-sobre");
+    const cultura = document.getElementById("conteudo-cultura");
+    const btnSobre = document.getElementById("btn-sobre");
+    const btnCultura = document.getElementById("btn-cultura");
+
+    // Reset
+    sobre.classList.add("hidden");
+    cultura.classList.add("hidden");
+    btnSobre.classList.remove("border-neutral-800", "font-bold", "bg-white");
+    btnCultura.classList.remove("border-neutral-800", "font-bold", "bg-white");
+
+    if (tab === "sobre") {
+      sobre.classList.remove("hidden");
+      btnSobre.classList.add("border-neutral-800", "font-bold", "bg-white");
+    } else {
+      cultura.classList.remove("hidden");
+      btnCultura.classList.add("border-neutral-800", "font-bold", "bg-white");
+    }
+  }
+
+  // Ativa "Sobre" por padrão
+  document.addEventListener("DOMContentLoaded", () => {
+    showTab('sobre');
+  });
+</script>
+
+  </section>
+
+  <!-- Seções Finais -->
+  <section class="px-6 py-12" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto bg-white bg-opacity-70 backdrop-blur-md p-8 rounded-2xl shadow-lg text-center">
+      <h2 class="text-3xl font-bold mb-4">🌟 Por Que Nos Escolher</h2>
+      <p class="text-lg leading-relaxed">
+        Porque oferecemos mais do que marketing — oferecemos transformação.<br><br>
+        Combinamos experiência, tecnologia de ponta e criatividade para construir marcas sólidas e campanhas de alta performance.<br><br>
+        Ao nos escolher, você ganha:<br>
+        ✅ Estratégias com uso inteligente de IA<br>
+        ✅ Atendimento personalizado<br>
+        ✅ Resultados mensuráveis<br>
+        ✅ Time experiente e comprometido
+      </p>
+    </div>
+  </section>
+<!-- Seção Serviços -->
+  <section class="px-6 py-20 bg-neutral-900 text-black">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">💼 Nossos Serviços</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-2 gap-8">
+
+        <!-- Cartão Serviço -->
+        <div class="bg-neutral-800 p-6 rounded-2xl shadow-xl text-center" data-aos="zoom-in">
+          <div class="text-4xl mb-4">🎬</div>
+          <h3 class="text-xl font-bold mb-2">Criativos para Vídeos</h3>
+          <p class="text-neutral-300">Reels, Shorts, vídeos de vendas e criativos para tráfego pago.</p>
+        </div>
+
+        <div class="bg-neutral-800 p-6 rounded-2xl shadow-xl text-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="text-4xl mb-4">🎨</div>
+          <h3 class="text-xl font-bold mb-2">Design Profissional</h3>
+          <p class="text-neutral-300">Identidade visual, posts para Instagram e apresentações de impacto.</p>
+        </div>
+
+        <div class="bg-neutral-800 p-6 rounded-2xl shadow-xl text-center" data-aos="zoom-in" data-aos-delay="200">
+          <div class="text-4xl mb-4">📊</div>
+          <h3 class="text-xl font-bold mb-2">Tráfego Pago</h3>
+          <p class="text-neutral-300">Campanhas segmentadas no Facebook Ads, Google Ads e YouTube Ads.</p>
+        </div>
+
+        <div class="bg-neutral-800 p-6 rounded-2xl shadow-xl text-center" data-aos="zoom-in" data-aos-delay="300">
+          <div class="text-4xl mb-4">✍️</div>
+          <h3 class="text-xl font-bold mb-2">Copywriting</h3>
+          <p class="text-neutral-300">Textos persuasivos para anúncios, páginas de venda e redes sociais.</p>
+        </div>
+
+        <div class="bg-neutral-800 p-6 rounded-2xl shadow-xl text-center" data-aos="zoom-in" data-aos-delay="400">
+          <div class="text-4xl mb-4">🤖</div>
+          <h3 class="text-xl font-bold mb-2">Automação de WhatsApp</h3>
+          <p class="text-neutral-300">Funis automatizados com bots e mensagens programadas.</p>
+        </div>
+
+        <div class="bg-neutral-800 p-6 rounded-2xl shadow-xl text-center" data-aos="zoom-in" data-aos-delay="500">
+          <div class="text-4xl mb-4">📈</div>
+          <h3 class="text-xl font-bold mb-2">Consultoria Estratégica</h3>
+          <p class="text-neutral-300">Diagnóstico completo, estratégia e plano de ação para iniciantes no marketing.</p>
+        </div>
+
+      </div>
+    </div>
+  <section class="px-6 py-12" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto bg-white bg-opacity-70 backdrop-blur-md p-8 rounded-2xl shadow-lg text-center">
+      <h2 class="text-3xl font-bold mb-4">🙏 Agradecimento</h2>
+      <p class="text-lg leading-relaxed">
+        Agradecemos por considerar a INVEX ASSESSORIA como parceira estratégica no crescimento do seu negócio.<br><br>
+        Será um prazer iniciar essa jornada ao seu lado e mostrar, na prática, o que nossa agência pode fazer por você.
+      </p>
+    </div>
+  </section>
+
+<<section class="px-6 py-12" data-aos="fade-up">
+  <div class="max-w-3xl mx-auto bg-white bg-opacity-70 backdrop-blur-md p-8 rounded-2xl shadow-lg text-center">
+    <h2 class="text-3xl font-bold mb-4">📞 Contato</h2>
+
+    <!-- Botão de ação -->
+    <button 
+      onclick="document.getElementById('contatos').classList.toggle('hidden')" 
+      class="text-xl font-semibold text-gray-800 hover:text-blue-600 transition duration-300"
+    >
+      Vamos conversar e dar o primeiro passo juntos?
+    </button>
+
+    <!-- Contatos (inicialmente ocultos) -->
+    <div id="contatos" class="hidden mt-6 transition-all duration-300">
+      <p class="text-lg leading-relaxed">
+        📧 E-mail: invexassessoria@gmail.com<br>
+        📱 Instagram: @invexassessoria<br>
+        📞 Telefone: <a href="tel:+5511912345678" class="text-blue-600 hover:underline">(41) 9565-8389</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+</section>
+
+
+  <!-- Footer -->
   <footer class="text-center text-sm py-6 text-neutral-600">
     &copy; 2025 Invex Assessoria. Todos os direitos reservados.
   </footer>
